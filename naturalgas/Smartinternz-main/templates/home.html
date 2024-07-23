@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural Gas Prediction - Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    /* Inline styles for demonstration; consider moving to external CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+
+    .fullscreen-bg {
+      background-image: url('https://images.unsplash.com/photo-1556740749-60b725e3a3c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDkxfHxuYXR1cmFsJTIwZ2FzfGVufDB8fDE2NzE5NTI0Njc&ixlib=rb-1.2.1&q=80&w=1080');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .site-name {
+      font-size: 2.5em;
+      text-align: center;
+      margin: 20px 0;
+      color: #fff;
+    }
+
+    .header {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar li {
+      margin: 0 15px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #ffcc00;
+    }
+
+    .main {
+      padding: 60px 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .main h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .main h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .main h3 {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .main p {
+      font-size: 1em;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1em;
+      color: #fff;
+      background-color: #ff5722;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e64a19;
+    }
+
+    .footer {
+      padding: 10px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .footer p {
+      margin: 0;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Site Name -->
+  <div class="site-name">Natural Gas Price Predictor</div>
+
+  <!-- Fullscreen Background -->
+  <div class="fullscreen-bg">
+
+    <!-- Header with Navigation -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('predict') }}">Predict</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container">
+        <section>
+          <h1>Predict Natural Gas Prices</h1>
+          <h2>Your Insight into Future Prices</h2>
+          <h3>Stay Ahead of the Market</h3>
+          <p>Leverage our advanced prediction tool to make well-informed decisions. Whether you are a trader, investor, or industry expert, our tool helps you stay competitive with accurate forecasts.</p>
+          <a href="{{ url_for('predict') }}" class="btn">Get Started</a>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Natural Gas Prediction. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
+

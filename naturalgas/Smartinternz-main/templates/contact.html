@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get in Touch</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: #f4f4f9;
+    }
+
+    .header {
+      background: #444;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .navbar {
+      background: #555;
+      overflow: hidden;
+    }
+
+    .navbar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar li {
+      margin: 0;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: block;
+      transition: background 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background: #333;
+    }
+
+    .main {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .main h2 {
+      font-size: 2.5em;
+      color: #222;
+      margin-bottom: 20px;
+    }
+
+    .main p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .main form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .main form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .main form input, .main form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .main form button {
+      background: #444;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .main form button:hover {
+      background: #222;
+    }
+
+    .contact-details {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .contact-details h3 {
+      font-size: 2em;
+      color: #222;
+    }
+
+    .contact-details p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .contact-details a {
+      color: #444;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-details a:hover {
+      color: #222;
+    }
+
+    .footer {
+      background: #555;
+      padding: 10px 0;
+      text-align: center;
+      color: #fff;
+      font-size: 1em;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <h1>Contact Us</h1>
+  </header>
+
+  <!-- Navigation Section -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('predict') }}">Predict</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Section -->
+  <main class="main">
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <p>We'd love to hear from you! For any questions or support, use the contact form below or reach out to us directly.</p>
+
+      <form action="submit_form_url" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-details">
+        <h3>Contact Information</h3>
+        <p>Email: <a href="mailto:truptigaikwad169@gmail.com">truptigaikwad169@gmail.com</a></p>
+        <p>Phone: <a href="tel:+7038677271">703-867-7271</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2024 Natural Gas Prediction Tool. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
